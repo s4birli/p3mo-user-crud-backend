@@ -1,0 +1,6 @@
+@p3mo_user_crud_backend_HostAddress = http://localhost:5019
+
+GET {{p3mo_user_crud_backend_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
