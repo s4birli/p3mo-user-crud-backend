@@ -1,6 +1,11 @@
-@p3mo_user_crud_backend_HostAddress = http://localhost:5019
+@p3mo_user_crud_backend_HostAddress = http://localhost:5000
 
-GET {{p3mo_user_crud_backend_HostAddress}}/weatherforecast/
+GET {{p3mo_user_crud_backend_HostAddress}}/api/users
+Accept: application/json
+
+###
+
+GET {{p3mo_user_crud_backend_HostAddress}}/api/users/1
 Accept: application/json
 
 ###
