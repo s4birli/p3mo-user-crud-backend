@@ -101,7 +101,7 @@ This application fulfills the technical requirements specified in the developer 
 - .NET 9.0 SDK installed
 - Access to Microsoft SQL Server on Azure (or local SQL Server instance)
 - Node.js installed (required for Playwright dependencies)
-- Frontend application running on `http://localhost:5500` (API is configured to only accept requests from this origin)
+- Frontend application running on `http://localhost:3000` (API is configured to only accept requests from this origin)
 
 ### Setup and Run
 
@@ -370,7 +370,7 @@ If you're having trouble connecting to the database:
 If PDF generation is failing:
 - Ensure Node.js is installed (required for Playwright)
 - Check that the `FrontendUrl` is correctly configured
-- Ensure the frontend is running at `http://localhost:5500` before attempting to generate PDFs
+- Ensure the frontend is running at `http://localhost:3000` before attempting to generate PDFs
 - Verify that the frontend application is running and accessible
 - Run `playwright install chromium` to ensure browser dependencies are installed
 - Check if your skeleton UI elements use different CSS classes than those specified in the wait logic
@@ -383,7 +383,7 @@ If PDF generation is failing:
 - Services follow the Single Responsibility Principle for better maintainability
 - Entity Framework Core migrations are used to manage the database schema
 - The API includes data seeding for initial user and role data
-- CORS is configured to only allow requests from the frontend at `http://localhost:5500`
+- CORS is configured to only allow requests from the frontend at `http://localhost:3000`
 - The database schema follows normalization principles for optimal data management
 - The PdfService includes enhanced waiting strategies to properly capture dynamic content
 - The `drop.sql` script is provided for complete database reset when needed 

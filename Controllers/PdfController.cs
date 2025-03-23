@@ -26,7 +26,7 @@ namespace p3mo_user_crud_backend.Controllers
         {
             try
             {
-                var frontendUrl = _configuration["FrontendUrl"] ?? "http://localhost:5500";
+                var frontendUrl = _configuration["FrontendUrl"] ?? "http://localhost:3000";
                 var pdfBytes = await _pdfService.GenerateUserPdfAsync(userId, frontendUrl);
                 return File(pdfBytes, "application/pdf", $"user-{userId}.pdf");
             }
