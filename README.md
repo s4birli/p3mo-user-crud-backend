@@ -230,7 +230,6 @@ The application uses Entity Framework Core with a code-first approach, implement
 | DateOfBirth | DateTime | Required | User's date of birth |
 | RoleId | int | Foreign Key (Roles.Id), Required | Reference to the Roles table |
 | Country | string | Required | User's country |
-| AvatarUrl | string | Optional, URL format | Link to user's avatar image |
 
 ### Roles Table
 

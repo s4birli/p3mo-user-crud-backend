@@ -60,7 +60,6 @@ namespace p3mo_user_crud_backend.Services
                 DateOfBirth = userDto.DateOfBirth,
                 RoleId = userDto.RoleId,
                 Country = userDto.Country,
-                AvatarUrl = userDto.AvatarUrl
             };
 
             // Set the relationship
@@ -122,9 +121,6 @@ namespace p3mo_user_crud_backend.Services
             
             if (userDto.Country != null)
                 user.UserDetails.Country = userDto.Country;
-            
-            if (userDto.AvatarUrl != null)
-                user.UserDetails.AvatarUrl = userDto.AvatarUrl;
 
             await _context.SaveChangesAsync();
             
@@ -167,7 +163,6 @@ namespace p3mo_user_crud_backend.Services
                     RoleId = 2, // Default to User role
                     Role = "User", // Default role name
                     Country = "Unknown",
-                    AvatarUrl = null
                 };
             }
             
@@ -185,8 +180,7 @@ namespace p3mo_user_crud_backend.Services
                 DateOfBirth = user.UserDetails.DateOfBirth,
                 RoleId = user.UserDetails.RoleId,
                 Role = user.UserDetails.Role?.Name ?? "Unknown",
-                Country = user.UserDetails.Country,
-                AvatarUrl = user.UserDetails.AvatarUrl
+                Country = user.UserDetails.Country
             };
         }
     }

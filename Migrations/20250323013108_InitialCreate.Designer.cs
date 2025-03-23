@@ -12,7 +12,7 @@ using p3mo_user_crud_backend.Data;
 namespace p3mo_user_crud_backend.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250322231728_InitialCreate")]
+    [Migration("20250323013108_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -93,7 +93,7 @@ namespace p3mo_user_crud_backend.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2025, 3, 22, 23, 17, 27, 390, DateTimeKind.Utc).AddTicks(8590),
+                            CreatedAt = new DateTime(2025, 3, 23, 1, 31, 7, 682, DateTimeKind.Utc).AddTicks(5196),
                             Email = "mehmet@example.com",
                             IsActive = true
                         });
@@ -106,9 +106,6 @@ namespace p3mo_user_crud_backend.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("AvatarUrl")
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Country")
                         .IsRequired()
@@ -151,8 +148,7 @@ namespace p3mo_user_crud_backend.Migrations
                         new
                         {
                             Id = 1,
-                            AvatarUrl = "https://example.com/avatar1.jpg",
-                            Country = "UK",
+                            Country = "United Kingdom",
                             DateOfBirth = new DateTime(1980, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             FirstName = "Mehmet",
                             LastName = "Sabirli",

@@ -54,8 +54,7 @@ namespace p3mo_user_crud_backend.Migrations
                     LastName = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     DateOfBirth = table.Column<DateTime>(type: "datetime2", nullable: false),
                     RoleId = table.Column<int>(type: "int", nullable: false),
-                    Country = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
-                    AvatarUrl = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    Country = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false)
                 },
                 constraints: table =>
                 {
@@ -87,12 +86,12 @@ namespace p3mo_user_crud_backend.Migrations
             migrationBuilder.InsertData(
                 table: "Users",
                 columns: new[] { "Id", "CreatedAt", "Email", "IsActive" },
-                values: new object[] { 1, new DateTime(2025, 3, 22, 23, 17, 27, 390, DateTimeKind.Utc).AddTicks(8590), "mehmet@example.com", true });
+                values: new object[] { 1, new DateTime(2025, 3, 23, 1, 31, 7, 682, DateTimeKind.Utc).AddTicks(5196), "mehmet@example.com", true });
 
             migrationBuilder.InsertData(
                 table: "UserDetails",
-                columns: new[] { "Id", "AvatarUrl", "Country", "DateOfBirth", "FirstName", "LastName", "MiddleName", "RoleId", "UserId" },
-                values: new object[] { 1, "https://example.com/avatar1.jpg", "UK", new DateTime(1980, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "Mehmet", "Sabirli", "", 1, 1 });
+                columns: new[] { "Id", "Country", "DateOfBirth", "FirstName", "LastName", "MiddleName", "RoleId", "UserId" },
+                values: new object[] { 1, "United Kingdom", new DateTime(1980, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "Mehmet", "Sabirli", "", 1, 1 });
 
             migrationBuilder.CreateIndex(
                 name: "IX_UserDetails_RoleId",

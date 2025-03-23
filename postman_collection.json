@@ -56,7 +56,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"email\": \"test.user@example.com\",\n  \"isActive\": true,\n  \"firstName\": \"Test\",\n  \"lastName\": \"User\",\n  \"middleName\": \"Sample\",\n  \"dateOfBirth\": \"1990-01-01T00:00:00\",\n  \"roleId\": 2,\n  \"country\": \"Turkey\",\n  \"avatarUrl\": \"https://example.com/avatar.jpg\"\n}"
+							"raw": "{\n  \"email\": \"test.user@example.com\",\n  \"isActive\": true,\n  \"firstName\": \"Test\",\n  \"lastName\": \"User\",\n  \"middleName\": \"Sample\",\n  \"dateOfBirth\": \"1990-01-01T00:00:00\",\n  \"roleId\": 2,\n  \"country\": \"Turkey\"\n}"
 						},
 						"url": {
 							"raw": "{{baseUrl}}/api/users",
@@ -338,8 +338,8 @@
 	"variable": [
 		{
 			"key": "baseUrl",
-			"value": "http://localhost:5300",
+			"value": "http://localhost:5000",
 			"type": "string"
 		}
 	]
-} 
+}

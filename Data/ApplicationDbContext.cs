@@ -61,8 +61,7 @@ namespace p3mo_user_crud_backend.Data
                     LastName = "Sabirli",
                     DateOfBirth = new DateTime(1980, 1, 1),
                     RoleId = 1, // Admin
-                    Country = "UK",
-                    AvatarUrl = "https://example.com/avatar1.jpg"
+                    Country = "United Kingdom"
                 }
             );
         }
